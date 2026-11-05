@@ -1,0 +1,146 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1f3b33;
+  background: #f8f8f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --green: #183e36;
+  --muted: #68796d;
+  --line: #dce3d9;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+a:focus-visible, button:focus-visible { outline: 3px solid #cb7046; outline-offset: 5px; }
+::selection { background: #d9e9b6; color: #183e36; }
+.page-width { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
+.skip-link { position: absolute; top: -80px; left: 16px; z-index: 10; padding: 12px; background: white; }
+.skip-link:focus { top: 8px; }
+.site-header { min-height: 114px; display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand-mark { background: var(--green); color: #e4ebcf; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; font-family: serif; font-size: 25px; }
+.brand strong { display: block; font-size: 17px; font-weight: 650; letter-spacing: .04em; }
+.brand small { display: block; margin-top: 5px; font-size: 9px; letter-spacing: .16em; color: var(--muted); }
+nav { display: flex; align-items: center; gap: 28px; font-size: 13px; }
+nav > a { padding-block: 12px; }
+nav > a:hover { color: #64824c; }
+.language-button { display: flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid #cfd9cb; background: transparent; border-radius: 30px; color: var(--green); font-size: 12px; }
+.language-button:hover { background: #eaf0e3; }
+.language-button > span { font-size: 19px; line-height: 1; }
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 590px; align-items: center; gap: 48px; padding-block: 82px 84px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; font-size: 10px; font-weight: 600; letter-spacing: .15em; margin: 0 0 24px; color: #68805c; line-height: 1.6; }
+.status-dot { width: 6px; height: 6px; background: #759157; border-radius: 50%; }
+h1 { font-size: clamp(40px, 4.6vw, 58px); line-height: 1.35; font-weight: 600; letter-spacing: -.035em; margin: 0 0 24px; }
+h1 > span { color: #78915e; }
+.introduction { color: var(--muted); font-size: 14px; line-height: 1.95; max-width: 365px; margin: 0 0 30px; }
+.primary-link { display: inline-flex; align-items: center; gap: 26px; background: var(--green); color: #fcfff7; padding: 15px 20px; border-radius: 5px; font-size: 13px; }
+.primary-link:hover { background: #2b5445; }
+.location { display: flex; align-items: center; gap: 8px; margin-top: 28px; font-size: 10px; color: #7b8978; }
+.location > span:first-child { font-size: 18px; }
+.location-rule { height: 10px; width: 1px; background: #c8d0c1; margin-inline: 6px; }
+.card-scene { min-height: 360px; display: grid; align-content: center; justify-items: center; position: relative; }
+.scene-ring { position: absolute; border: 1px solid #dce3cd; border-radius: 50%; z-index: -1; pointer-events: none; }
+.ring-one { width: 346px; height: 346px; top: 0; left: 50%; transform: translateX(-50%); }
+.ring-two { width: 422px; height: 422px; top: -38px; left: 50%; transform: translateX(-50%); border-style: dashed; opacity: .55; }
+.membership-card { width: 100%; max-width: 402px; aspect-ratio: 1.62; padding: 25px 27px 20px; border-radius: 15px; background: var(--green); color: #f2f3e6; box-shadow: 0 22px 50px -25px #183e3655; position: relative; overflow: hidden; transform: rotate(-6deg); }
+.card-top { display: flex; justify-content: space-between; align-items: center; font-size: 25px; letter-spacing: -.03em; font-weight: 600; }
+.card-period { color: #cce3a5; }
+.card-flower { color: #d4e7b1; font-size: 32px; font-weight: 400; line-height: 1; }
+.card-middle { position: relative; margin-top: 27px; }
+.card-middle > p { font-size: 8px; letter-spacing: .08em; color: #bccdb9; margin: 0 0 10px; position: relative; z-index: 1; }
+.card-middle > h2 { font-size: 20px; font-weight: 450; margin: 0; max-width: 240px; position: relative; z-index: 1; }
+.card-art { position: absolute; top: -22px; right: -80px; width: 170px; height: 170px; transform: rotate(40deg); }
+.card-art i { position: absolute; display: block; width: 110px; height: 110px; border: 1px solid #c7dc9a45; border-radius: 50%; }
+.card-art i:nth-child(2) { left: 30px; }
+.card-art i:nth-child(3) { top: 30px; }
+.card-art i:nth-child(4) { top: 30px; left: 30px; }
+.card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 37px; border-top: 1px solid #e0e8cd33; padding-top: 14px; font-size: 8px; color: #c1cfbb; letter-spacing: .1em; }
+.card-caption { display: flex; align-items: center; gap: 8px; margin-top: 33px; font-size: 10px; color: #7a8770; }
+.caption-line { width: 25px; height: 1px; background: #aebd9a; }
+.services-section { background: #eef1e8; padding-block: 63px 67px; border-block: 1px solid #e4e8dc; }
+.section-heading { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 32px; }
+.section-heading .eyebrow { margin-bottom: 13px; font-size: 9px; }
+.section-heading h2 { font-size: 27px; font-weight: 550; letter-spacing: -.025em; margin: 0; line-height: 1.45; }
+.section-heading > p { font-size: 12px; line-height: 1.85; color: var(--muted); max-width: 290px; margin: 0 0 2px; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.service-card { background: #fbfcf6; border: 1px solid #dfe5d7; padding: 27px 26px 20px; border-radius: 7px; display: flex; flex-direction: column; }
+.service-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 27px; }
+.service-icon { color: #526e45; display: inline-flex; }
+.service-number { font-size: 11px; color: #97a28d; }
+.service-card h3 { font-size: 17px; font-weight: 550; margin: 0 0 11px; }
+.service-card > p { font-size: 12px; line-height: 1.9; color: var(--muted); margin: 0 0 25px; flex-grow: 1; max-width: 240px; }
+.upcoming { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e3e8db; padding-top: 14px; font-size: 10px; color: #6c7d61; }
+.upcoming > span { font-size: 17px; color: #9baa8c; }
+.community-section { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding-block: 57px; }
+.community-section .eyebrow { font-size: 9px; margin-bottom: 13px; }
+.community-section h2 { font-size: 21px; font-weight: 550; margin: 0 0 12px; line-height: 1.5; }
+.community-section p:not(.eyebrow) { color: var(--muted); font-size: 12px; line-height: 1.85; margin: 0; }
+.community-tags { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; max-width: 340px; flex-shrink: 0; }
+.community-tags > span { display: inline-flex; gap: 7px; font-size: 10px; padding: 9px 12px; border: 1px solid #dce3d2; border-radius: 30px; color: #5f7650; }
+.site-footer { min-height: 90px; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-name { font-size: 14px; font-weight: 650; }
+.footer-name > span { font-size: 11px; font-weight: 400; color: #6a7a64; }
+.site-footer p { font-size: 10px; color: #7b8874; }
+.site-footer small { font-size: 9px; color: #7b8874; text-align: right; }
+.developer-status { border-top: 1px dashed #cdd8c2; color: #66765b; padding: 8px 20px; text-align: center; font-family: monospace; font-size: 10px; }
+
+@media (min-width: 1400px) { .hero { min-height: 620px; } }
+@media (max-width: 1000px) {
+  .page-width { width: calc(100% - 64px); }
+  .hero { gap: 28px; min-height: 540px; }
+  h1 { font-size: 42px; }
+  .membership-card { padding: 23px 23px 18px; }
+  .card-middle { margin-top: 22px; }
+  .card-middle > h2 { font-size: 18px; }
+  .card-bottom { margin-top: 26px; }
+  .ring-two { width: 340px; height: 340px; top: 0; }
+  .ring-one { width: 280px; height: 280px; top: 30px; }
+  .community-section { gap: 20px; }
+  .community-tags { max-width: 210px; }
+}
+@media (max-width: 720px) {
+  .page-width { width: calc(100% - 40px); }
+  .site-header { min-height: 88px; gap: 12px; }
+  .brand-mark { width: 37px; height: 37px; font-size: 23px; }
+  .brand { gap: 9px; }
+  .brand strong { font-size: 14px; }
+  .brand small { font-size: 8px; }
+  nav { gap: 12px; }
+  .services-link, .about-link { display: none; }
+  .language-button { padding: 9px 12px; }
+  .hero { grid-template-columns: 1fr; gap: 34px; padding-block: 48px 40px; }
+  h1 { font-size: clamp(36px, 9vw, 48px); line-height: 1.35; }
+  .eyebrow { font-size: 9px; margin-bottom: 20px; }
+  .introduction { font-size: 13px; max-width: 440px; }
+  .location { margin-top: 23px; }
+  .card-scene { min-height: 315px; width: 100%; max-width: 410px; margin-inline: auto; }
+  .membership-card { max-width: 325px; padding: 23px 24px 20px; }
+  .card-top { font-size: 23px; }
+  .card-middle { margin-top: 20px; }
+  .card-middle > h2 { font-size: 18px; }
+  .card-middle > p { font-size: 7px; }
+  .card-bottom { margin-top: 25px; font-size: 7px; }
+  .ring-one { width: 270px; height: 270px; top: 6px; }
+  .ring-two { width: 322px; height: 322px; top: -20px; }
+  .card-caption { margin-top: 30px; }
+  .services-section { padding-block: 40px; }
+  .section-heading { flex-direction: column; align-items: start; gap: 15px; margin-bottom: 24px; }
+  .section-heading h2 { font-size: 24px; }
+  .section-heading > p { max-width: 400px; }
+  .service-grid { grid-template-columns: 1fr; gap: 12px; }
+  .service-card { padding: 23px; }
+  .service-card-top { margin-bottom: 20px; }
+  .service-card > p { max-width: none; margin-bottom: 20px; }
+  .community-section { flex-direction: column; align-items: start; gap: 24px; padding-block: 40px; }
+  .community-section h2 { font-size: 20px; }
+  .community-tags { max-width: none; justify-content: start; }
+  .site-footer { padding-block: 24px; flex-wrap: wrap; gap: 12px; }
+  .site-footer p { margin: 0; }
+  .site-footer small { flex-basis: 100%; text-align: left; line-height: 1.7; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
