@@ -8,12 +8,43 @@
 - Supabase: managed PostgreSQL, authentication and narrowly scoped backend functions.
 - Cloudflare Pages: static hosting; build output is `dist/`.
 
+## Start locally
+
+Use Node 24 and npm:
+
+```sh
+npm ci
+cp .env.example .env.local
+npm run dev
+```
+
+The app shell works with both Supabase values blank. Only a browser-safe publishable key belongs in `VITE_SUPABASE_PUBLISHABLE_KEY`; secret keys and legacy JWT keys are rejected. FEAT-001 performs no backend calls or data writes.
+
+```sh
+npm run check
+```
+
+This runs configuration boundary tests, TypeScript checks and a production build.
+
+## Project map
+
+| Path | Purpose |
+| --- | --- |
+| `src/App.tsx` | Public application shell |
+| `src/i18n.ts` | Chinese/English interface copy |
+| `src/lib/` | Configuration boundary and lazy Supabase client |
+| `supabase/migrations/` | Future versioned schema and permission changes |
+| `docs/features/` | Small feature scopes and acceptance criteria |
+| `.github/workflows/ci.yml` | Reproducible checks |
+| `wrangler.jsonc`, `public/_headers`, `public/_redirects` | Static Cloudflare Pages configuration |
+
+See [architecture](docs/architecture.md), [setup and deployment](docs/deployment.md) and [FEAT-001](docs/features/FEAT-001-project-foundation.md).
+
 ## Workflow
 
 - `main`: stable, reviewed changes.
 - `feat/<feature-name>`: one small, reviewable feature at a time.
 - Use Conventional Commits, for example `feat: initialize project foundation`.
-- Project setup, local development, checks and deployment instructions are added in FEAT-001.
 
 ## Feature sequence
 
